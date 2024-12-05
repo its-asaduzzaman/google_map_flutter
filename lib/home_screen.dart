@@ -9,15 +9,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  static const CameraPosition _kGooglePxel = CameraPosition(target:
-  LatLng(19.95818, 81.16201), zoom: 14.4746);
+  static const LatLng _pGooglePlex = LatLng(37.4223, -122.0848);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: GoogleMap(
-          initialCameraPosition:_kGooglePxel,
+          initialCameraPosition: CameraPosition(
+            target: _pGooglePlex,
+            zoom: 13,
+          ),
         ),
       ),
     );
